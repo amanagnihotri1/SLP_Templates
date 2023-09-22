@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;400;500;700;1,400&display=swap");
+.modalContainer
+ {
+    position: fixed;
+    font-family: "Roboto", sans-serif;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.35);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+.modal-sub-container
+{
+    position: relative;
+    width: 335px;
+    height: 201px;
+    background-color: #FFF;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+.close 
+{
+        position: absolute;
+        top: 2%;
+        right: 4px;
+        width: 20px;
+        height:20px;
+        cursor: pointer;
+        object-fit: cover;
+        padding-top: 4px;
+        padding-left: 5px;
+        border-radius: 100%;
+        background-color: white;
+        filter: drop-shadow(0px 3px 15px #00000080);
+img
+{
+    width: 70%;
+    height: 70%;
+    border-radius: 100%;
+    border: 0px;
+}
+}
+.data-wrapper
+{ 
+    width: 270px;
+    height: 152px;
+    position: relative;
+    margin:7% 9%;
+.couponStyle
+{
+      font-size: 22px;
+      color: black;
+      font-weight: bold;
+      margin: 0;
+}
+.inputwrapper
+{
+    width: 270px;
+    height: 96px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 32px;
+.inputfield
+{
+     width: 98%;
+     height: 40px;
+     border: 0.5px solid #8A8D95;
+    border-radius: 5px;
+}
+.buttonstyling
+{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+}
+}
+}
+ }

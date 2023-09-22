@@ -1,0 +1,349 @@
+@use "../template4/_template4.scss";
+%imageStyling
+{
+    width: 100%;
+    height: 100%;
+}
+.subcolor1
+{
+ background-color: #5CA4EE;
+}
+.subcolor1:hover
+{
+    background-color: #498ACE;
+}
+.subColor2
+{
+    background-color: white;
+}
+%iconStyling
+{
+    width: 13.59px;
+    height: 13.59px;
+    object-fit: cover;
+}
+@mixin cardProperties($cardWidth,$cardheight)
+{
+  width: $cardWidth !important;
+  height: $cardheight !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@mixin buttonStyling($buttonWidth,$buttonHeight,$buttonColor,$textColor)
+{
+  background-color: $buttonColor;
+  width: $buttonWidth;
+  height: $buttonHeight;
+  color: $buttonColor;
+}
+%textContentStyle
+{
+    width: 86%;
+    border-radius: 10px;
+    padding-left: 6.7%;
+    padding-right: 7.93%;
+    padding-top: 6%;
+    height: auto;
+    box-shadow: none;
+}
+.subscriptionStyle4
+{
+ @include template4.textStyling(16px,600,0,0);
+ padding: 0px 0px !important;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+}
+.itemText
+{
+    font-size: 12px;
+    font-weight: 500;
+}
+.carousalWrapper5
+{
+  width: 100%;
+  display: flex;
+  margin: 250px 0px !important;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: none;
+  padding: 0;
+  height: 478px !important;
+  align-items: center;
+.slick-slide {
+   margin: 0px 0px !important;
+}
+.slick-list {
+    height: 555px;
+    padding: 120px 0px;
+    margin: 0 -5px;}
+.slick-slide>div {padding: 0 5px;}
+}
+.cardsubContent
+{
+width: 94% !important;
+margin-left: 6%;
+margin-right: 3%;
+margin-top: 3%;
+}
+.subsDescription
+{
+text-align: left;
+font-weight:bold;
+font-size: 16px;
+font-family: 'Roboto';
+text-transform:uppercase;
+}
+.priceTagStyle5
+{
+  font-size: 48px;
+  @include template4.textStyling(48px,400,0,0);   
+}
+.pricewrapper
+{
+    display: flex;
+p
+{
+   margin-top:28px;
+   @include template4.textStyling(18px,500,28px 0px 0px 0px,0);
+}        
+}
+.cardStyleweb
+{
+    flex-direction: column;
+    width: 316px !important;
+    margin-bottom: 36px;
+    min-height: 478px;
+    margin: 0;
+    padding-bottom:0;
+    display: flex;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    flex-direction: column;
+    position: relative;
+&:hover
+{
+    filter: drop-shadow(0px 0px 16px #0000004D);
+    box-shadow:  0px 0px 16px #0000004D;
+}
+}
+.cardStyleweb2
+{
+    border: 0.5px solid #E7E7E7;
+    border-radius: 10px;
+    min-height: 478px;
+}
+.originalPricewrapper
+{
+    display: flex;
+    @include template4.textStyling(16px,400,0,0);
+    margin-top: -15px;
+    height:38px;
+}
+.pricetagtext
+{
+  margin: 0 0;
+  display: flex;
+h1
+{
+  @include template4.textStyling(48px,400,0,0);
+}
+.secText
+{
+    @include template4.textStyling(18px,500,30px 0px,0);
+}
+}
+.mainWrapper5
+{   
+    border-radius: 10px;
+    width: 1070px;
+    display: flex;
+    background-color: white;
+    justify-content:center;
+    align-items: center;
+    min-height: 554px;
+    height: auto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    
+}
+.carousal_styling
+{ 
+    align-items: center;
+}
+.imagewrapperStyling
+{
+    @extend %iconStyling;
+img
+{
+    @extend %imageStyling;
+}    
+}
+.combowrapper
+{
+    width: 273.59px;
+    height: 148.5px;
+}
+.benefitText
+{
+  font-size: 12px;
+  font-weight: 700; 
+  margin-left: 20px;
+  margin-top: 11px; 
+}
+.benefitContentStyling
+{
+    width: 94%;
+    margin: 8px 6% 0px 6%;
+    height: auto;
+
+}
+.benefititem
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.mainContentWrapper4
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 273px;
+  align-items: center;
+}
+.cardmainWrapper:hover
+{
+    border: 2px solid black;
+}
+.pricetagtext
+{ 
+    font-weight: 400;
+}
+.actionmbutton4
+{  
+    @include buttonStyling(270px,40px,5px,none);
+    margin-top: 18px;
+    margin-left: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.cardStyling5
+{
+    @include cardProperties(315px,478px);
+    box-shadow: 0px 0px 15px #0000001C;
+    margin: 6% 3%;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 20px;
+    overflow: auto;
+}
+.benefitbox
+{
+    width: 273px;
+    min-height: 118px;
+    margin-left: 20px;
+}
+.benefitlistwrapper
+{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.benefitlistitem
+{
+    width: 100%;
+    display: flex;
+    height: 12px;
+    gap: 10px;
+    overflow-wrap: break-word;
+    align-items: center;
+img
+{
+    width: 14px;
+    height: 14px;
+}
+}
+.offerspace
+{
+   width: 316px;
+   font-size: 14px;
+   text-align: center;
+   background-color: #22355B;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   color: #CED8DE;
+   margin-top:0px;
+   margin-bottom: 0px;
+   cursor: pointer;
+   padding:13px 0px;
+}
+.offerspace:hover>.cardmainWrapper
+{
+    border: 2px solid black;
+}
+.cardmainWrapper
+{
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px #0000001C;
+    border-radius: 12px;
+    box-shadow: 0.5px solid #E7E7E7;
+}
+.arrowwrapper4
+{ 
+ width: 54px;
+ height:54px;
+ margin:0px 54px;
+ padding: 0;
+ border-radius: 50%;
+ object-fit: cover;
+ position: relative;
+ cursor: pointer;
+svg
+{
+  @extend %imageStyling;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  stroke: white;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+}
+}
+.recommendedTag
+{
+    background-color:#E5F0F7;
+    color:#58AABA;
+     font-size:12px;
+      font-weight:500;
+      width:113px;
+      position: absolute;
+      top:-9px;
+      text-align: center;
+      margin: auto 100px;
+      border-radius: 5px;
+      padding:3px 0px;
+}
+.pricetime
+{
+    margin-left: 30px;
+}
+.appliedcouponstyling
+{
+    font-size:14px;
+    margin:10px 0px 10px 0px;
+    padding:0;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+}

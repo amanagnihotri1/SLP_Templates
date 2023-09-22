@@ -1,0 +1,12 @@
+$wrapperh:555px;
+$wrapperW:1070px;
+$subscriptionfontsize:16px;
+$pricetagText:48px;
+@mixin textStyling($fsize,$fweight,$fmargin,$padding)
+{
+  font-size: $fsize;
+  font-weight: $fweight;
+  padding: $padding;
+  margin: $fmargin;
+  font-family:'Roboto',sans-serif;
+}

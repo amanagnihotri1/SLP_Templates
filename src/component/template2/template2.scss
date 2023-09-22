@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+$cardbgColor:#C8EAF8;
+%imageStyling
+{
+  width: 100%;
+  height: 100%;
+}
+.linestyle
+{
+  border:1px dashed #5E5D83;
+  margin: 0;
+  width: 100%;
+  margin-top: 14px;
+}
+.cta-wrapper
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.card2
+{
+  margin-top: -10px;
+}
+%benefitItemStyling
+{
+  display: flex;
+  gap: 10px;
+  margin: 3px 0px;
+  width: 90%;
+  align-items: baseline;
+}
+%titlewrapper
+{
+  display: flex;
+  width: 100%;
+  height: 25px;
+  gap: 9px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+%imagewrapperStyling
+{
+  width: 100%;
+  height: 268px;
+  object-fit:cover;
+  border: 0;
+  outline: none;
+}
+%offerTile
+{
+    display: inline;
+    font-weight: 500;   
+}
+%textContentStyle
+{
+    width: 86%;
+    border-radius: 10px;
+    padding-left: 6.7%;
+    padding-right: 7.93%;
+    padding-top: 6%;
+    box-shadow: none;
+}
+%warningStyling2
+{
+    color: #9896AA;
+    font-weight: 500;
+    font-size: 14px; 
+    display: block;
+    margin-top: 10px;
+    margin-bottom:20px;
+    border-radius: 10px;
+}
+%buttonStyling2
+{
+    width: 100%;
+    margin-top:0px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    height: 50px;
+    margin-right: 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0px;
+}
+@mixin priceTag($textColor:#FFF)
+{
+    display: flex;
+    flex-direction:row;
+    margin-top: 15px;
+    height: auto;
+    font-family: 'Roboto',sans-serif;
+}
+.titlewrapper1
+{
+  @extend %titlewrapper;
+.subscriptionTitle
+  {
+      font-size:22px;
+      font-weight: bold;
+      font-family: 'Roboto',sans-serif;
+      padding: 0;
+      margin-top:0px;
+  }  
+.iconmain
+  {
+    width: 24px;
+    height: 24px;
+  }
+}
+.mainCoverwrapper
+{
+  @extend %imagewrapperStyling;
+img
+{
+  @extend %imageStyling;
+} 
+}  
+
+.card1
+{
+    width: 316px;
+    height: fit-content;
+    max-height: 527px;
+    border-radius: 10px;
+    background-color:transparent;
+    border: 1px solid #E5E5E5;
+    padding-bottom: 10px;
+} 
+ .RecommededCardStyling
+ {
+  background-color:#0A083E;
+  color:#FEFEFE;
+ }
+.arrowwrapper
+{ width: 54px;
+ height:54px;
+ margin:0px 54px;
+ padding: 0;
+ object-fit: cover;
+ cursor: pointer;
+img
+{
+    width: 100%;
+    height: 100%;    
+}
+.arrowwrapper>img:active
+{
+  opacity: 0.5;  
+}
+}
+.subshead
+{
+  text-align: center;
+  margin: 70px 0px;
+} 
+.carousalwrapper2
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: nowrap;
+  height: 800px;
+  color: transparent;
+  align-items: center;
+  margin: 0px 0px;
+}
+.mainWrapper2
+{
+    border-radius: 10px;
+    width: 968px;
+    display: flex;
+    background-color: transparent;
+    height: 800px;
+    z-index: 10;
+
+  .slick-center.slick-current>div>.card1
+  {
+    margin-top: -20px;
+    filter: drop-shadow(5px 10px 30px #00000086);
+    z-index: 10 !important;
+  }  
+  .slick-list
+  {
+    width:100%;
+    position: relative;
+    padding: 40px 20px !important;
+    height: 100%;
+    margin-top: 20px;
+    z-index: 0;
+  }  
+  slick-slide:not(.slick-active)
+  {
+    margin: 0px 120px  !important;
+  }
+  .slick-track
+  {
+    height: 623px !important;
+    margin: auto 0px;
+    padding-top: 20px;
+    padding: 20px 40px !important;
+  }
+  .slick-active.slick-cloned
+  {
+   margin:0px 0px !important; 
+  }
+  .slick-active
+  {
+    margin: 0px 20px !important;
+  }
+  .slick-dots
+  {
+    bottom: -83px;
+  }
+  .slick-center.slick-current>div>.card1
+   {
+    z-index: -3;
+    border-radius: 10px !important;
+    box-shadow: 0px 0px 20px #00000022;
+   }
+}
+.mainContentWrapper2
+{
+  @extend %textContentStyle;
+  width: 87.6%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 6%;
+    box-shadow: none;
+.subscribebutton
+{
+  @extend %buttonStyling2;
+}
+.discountText
+{
+    font-weight: 500;
+  .offer
+  {
+     @extend %offerTile;
+  }
+  .originalPrice
+  {
+    @extend %offerTile;
+      text-decoration: line-through;
+  }
+}
+.pricetagStyle
+{
+    @include priceTag($textColor:#FFFFFF);
+ p
+ {
+    color:#000;
+     font-size: 36px;
+     font-weight: 600;
+     padding: 0;
+     margin: 0;
+    }   
+.secText
+{
+  font-size: 16px;
+  padding: 0;
+  margin-top:18px;
+  color: #9896AA;
+  font-weight: 500;
+}
+}
+ .warning2
+ {
+   @extend %warningStyling2;
+   margin-bottom: 0px;
+ }
+
+ .mid-wrapper
+ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19px;
+ }
+.cta-wrapper
+{
+  width: 100%;
+  gap: 0px;
+}
+}
+.actionbutton2
+ {
+    @extend %buttonStyling2;
+    width: 276px;
+    height: 50px;
+    margin-top: 16px;
+    align-self: center;
+ }
+.benefitwrapper2
+{
+  width: 273px;
+  margin: 0px 0px;
+  margin-top: 14px;
+  .benefit_heading
+  {
+    font-weight:bold;
+    font-size: 16px;
+    letter-spacing:0;
+    margin-bottom: 12px;  
+    align-items: inherit;
+  }
+  .benefititem2
+  {
+    @extend %benefitItemStyling;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+   padding: 0;  
+  
+  svg
+  {
+    width: 12px;
+    height: 12px;
+  } 
+
+  }
+  .imagewrapper
+  {
+     width: 20px;
+     height: 20px;
+     object-fit: cover;
+  }
+ img
+ {
+  @extend %imageStyling;
+ }
+ .itemText
+ {
+    font-size: 12px;
+    font-weight: 400;
+ }
+ .tick
+ {
+    width: 100%;
+    height: 100%;
+ }  
+}
+.couponstyle
+{
+  font-weight: 500;
+  font-size: 14px;
+  align-self: center;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+}
+.notappliedcoupon
+{
+         color:#E73E88;
+          text-decoration:underline;
+          font-size:14px;
+          font-weight: 600;
+          margin:8px 0px;
+          font-family:'Roboto',sans-serif;
+}
+.appliedcouponstyling
+{
+  width: 270px;
+  background-color: #E6FFEC;
+  color: #30B73B;
+}

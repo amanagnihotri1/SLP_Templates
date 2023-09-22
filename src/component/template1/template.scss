@@ -1,0 +1,370 @@
+@import "../template1/_template1.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*
+{
+  font-family: 'Roboto',sans-serif;
+}
+.stylesmallText
+{
+  font-size: 20px !important;
+  width: fit-content;
+  color: black;
+  align-self: flex-end;
+  margin:8px;
+}
+.notappliedcoupon
+{
+  font-size:14px;
+  margin:15px 0px 15px 0px;
+  padding:0;
+  font-weight:bold;
+  text-decoration:underline;
+  cursor:pointer;
+  z-index: 0;
+}
+.color1
+{
+  background-color: #58B1F0;
+  color: #0C1A29;
+}
+.color1:hover
+{
+  background-color:#2D77AC;
+  color: white;
+}
+.color2
+{
+  background-color: #80DA71;
+  color: black;
+}
+.color2:hover
+{
+  background-color: #58A74B;
+  color: white;
+}
+.color3
+{
+  background-color: #8C7FF7;
+  color: black;
+}
+.color3:hover
+{
+  background-color: #594FAD;
+  color: white;
+}
+$cardbgColor:#C8EAF8;
+$priceSecSize:48px;
+%imageStyling
+{
+  width: 100%;
+  height: 100%;
+}
+%benefitItemStyling
+{
+  display: flex;
+  gap: 10px;
+  margin: 5px 0px;
+  width: 90%;
+  flex-direction: row;
+  min-height: 14px;
+  color: black;
+}
+%imagewrapperStyling
+{
+  width: 100%;
+  height: 268px;
+  object-fit:fill;
+  border: 0;
+  outline: none;
+}
+%offerTile
+{
+    color: #363636;
+    display: inline;
+    font-weight: 500;   
+}
+%textContentStyle2
+{
+    height: 330px;
+
+    border-radius: 10px;
+    padding: 0;
+}
+%warningStyling
+{
+    color: #363636;
+    font-weight: 500;
+    font-size: 14px; 
+    display: block;
+    margin: 0;
+    border-radius: 10px;
+}
+%buttonStylingclick
+{
+    width: 100%;
+    margin-top: 12px;
+    height: 40px;
+    margin: 14px 0px 12px 20px;
+    margin-right: 0;
+    border: 0;
+    border-radius: 36px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+%cardproperties
+{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+@mixin priceTag($textColor:#FFF)
+{
+    margin-top: 15px;
+    font-family: 'Roboto',sans-serif;
+}
+.mainCoverwrapperstyling
+{
+  @extend %imagewrapperStyling;
+img
+{
+  @extend %imageStyling;
+}  
+}  
+.arrowwrapper0
+{ 
+ width: 54px;
+ height:54px;
+ margin:0px 54px;
+ padding: 0;
+ border-radius: 50%;
+ object-fit: cover;
+ position: relative;
+ cursor: pointer;
+svg
+{
+  @extend %imageStyling;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  stroke: white;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+}
+
+}
+.commcard
+  {
+    @extend %cardproperties;
+    min-height: 502px;
+    width: max-content;
+    border: 0.5px solid transparent; 
+    margin: 0px -18px !important;
+  }
+  .arrowleft
+  {
+   width: 54px;
+   height: 54px;
+   margin-left: 10%;
+   margin-top: -8%;
+  }
+  .arrowright
+  {
+   width: 54px;
+   height: 54px;
+   margin-right: 10%;
+   margin-top: -8%;
+  }
+.subshead
+{
+  text-align: center;
+  margin: 0px 0px;
+} 
+.carousalwrapper
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  flex-wrap: nowrap;
+  height: 680px;
+  margin: 0px auto;
+}
+.mainWrapperStyle
+{
+  display: flex;
+  border-radius: 10px;
+  max-width: 1060px;
+  height: 99%;
+  padding-top: 26px !important;
+  justify-content:space-between;
+  gap: 22px;
+}
+.mainContentWrapperStyler:hover
+{
+  box-shadow: 0px 0px 16px #0000004D;
+  transition: 0.1s all ease-in-out;
+}
+.mainContentWrapperStyler
+{
+  @extend %textContentStyle2;
+  width: 320px !important;
+  min-height: 338px;
+  padding:20px 24px 5px 20px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+.subscriptionTitle
+{
+    font-size:22px;
+    font-weight: bold;
+    font-family:'Roboto',sans-serif;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+.discountText1
+{
+    font-weight: 500;
+    margin-top: 6px;
+   
+  .offer
+  {
+     @extend %offerTile;
+  }
+  .originalPrice
+  {
+    @extend %offerTile;
+    text-decoration: line-through;
+  }
+}
+.pricetag
+{
+    @include priceTag($textColor:#FFFFFF);
+    margin-top: 3px;
+    display: flex;
+    word-wrap: normal;
+ h2
+ {
+    color:#000;
+     font-size: 48px;
+     font-weight: 700;
+     padding: 0;
+     margin: 0;
+     display: flex;
+  }   
+.secText
+{
+  font-size: 48px;
+  padding: 0;
+  color: black;
+  font-weight: 700;
+}
+}
+ .warningText
+ {
+   @extend %warningStyling;
+ }
+
+ .mid_wrapper
+ {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4px;
+  margin-top: 13px;
+  align-items: center;
+  padding: 0px auto;
+ }
+}
+.benefitwrapper0
+{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-top: 3px;
+  margin: 10px auto;
+  word-wrap: break-word; 
+  color: #15213D;
+}
+.benefititem1
+{
+  @extend %benefitItemStyling;
+  color: black;
+  font-weight: 500;
+}
+.itemText
+{
+  font-size: 12px;
+  font-weight: 600;
+}
+.iconwrapper
+{
+   width: 5%;
+   height: auto;
+   object-fit: cover;
+   display: flex;
+   align-items: baseline;
+svg
+{
+  margin: auto 0px;
+  position: inherit;
+}
+  }
+.appliedcouponstyling
+{
+        width: 270px;
+        background-color: #E6FFEC;
+        color: #30B73B;
+        border-radius:4px;
+        position:relative;
+        text-decoration: none;
+        display:flex;
+        gap:5px;
+        padding:auto 0px;
+        width:100%;
+   img
+   {
+    width: 20px;
+    height: 20px;
+    margin: auto 0px;
+   }
+   svg
+   {
+       margin:0;
+        padding:2px 0px;
+        color:#30B73B;
+        font-weight:bold;
+   }
+      }
+.benefit_heading0
+  {
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+  }
+  .actionbuttonclick
+ {
+    @extend %buttonStylingclick;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px 0px;
+    transition: 0.1s ease-in-out;
+ }
+ .revealarea1
+{
+  text-decoration: underline;
+  font-size: 11px;
+  margin-top: 12px;
+  padding: 0;
+  cursor: pointer;
+  color: black;
+}

@@ -1,0 +1,28 @@
+.navwrapper
+{
+    width: 100%;
+    height: 60px;
+    background-color:#F5F8FB;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    position:sticky;
+    top: 0;
+    z-index: 2;
+}
+body
+{
+    position: relative;
+}
+.contentwrapper
+{   display: flex;
+    align-items: center;
+    width: 800px;
+    justify-content: center;
+    color: #5CA4EE;
+    font-weight: bold;
+    background-color:#F5F8FB;
+    font-size: 22px;
+    height: 100%;
+}
+
