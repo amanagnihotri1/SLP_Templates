@@ -5,8 +5,9 @@ import Slider from 'react-slick';
 import "../template1/slideStyles.scss";
 import Modal from '../Modal/Modal.jsx';
 import {ReactComponent as TickSvg} from "../../assets/tickfortemplate1.svg";
+import {ReactComponent as Ticksvg} from "../../assets/coupontick.svg";
+import { ReactComponent as CouponCross } from "../../assets/couponCross.svg";
 import { Popup } from "../popup/Popup";
-import  ticksvg from "../../assets/coupontick.svg";
 import { Dropdown2 } from "../Dropdown2/Dropdown2";
 import "../template1/template.scss";
 export const Template1 = () => {
@@ -15,7 +16,7 @@ export const Template1 = () => {
   const[cardid,setCardId]=useState('');
   const[pricingObj,setPricingObj]=useState({});
  const[isOpen,setModal]=useState(false);
- const[activeIndex,setId]=useState(null);
+ const[activeIndex,setActiveIndex]=useState(null);
  const[show,setShow]=useState(false);
  const[coupon,setCoupon]=useState(null);
  const[currentSlide,setSlide]=useState(0);
@@ -25,15 +26,15 @@ export const Template1 = () => {
   const slideRef=useRef();
   const settings = {
     dots: false,
-    infinite: true,
     className:"mainWrapperStyle",
-    speed: 500,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay:false,
     centerMode:'true',
+    speed:300,
     initialSlide:0,
+    swipe:false,
   };
   const dropStyle={
     background:'#FFF',
@@ -58,7 +59,6 @@ export const Template1 = () => {
   const wrapperStyle=
   {
    width:'276px',
-
   }
   return (
     <>
@@ -105,25 +105,18 @@ export const Template1 = () => {
        </button>
        {activeIndex!==item.id?
        (<p
-       className='notappliedcoupon'
+       className='notappliedcoupon0'
        style={{
          color:'#000',
          }}
-         onClick={()=>{setId(item.id); setModal(!isOpen);}}
+         onClick={()=>{setActiveIndex(item.id); setModal(!isOpen);}}
        >Apply Coupon</p>):
        (coupon!=null &&<span 
-       className="appliedcouponstyling">
-        <img 
-        src={ticksvg} 
-        alt='notfound'/>
+       className="appliedcouponstyling0">
+         <Ticksvg stroke={`#30B73B`} className='checkIconStyle' />
        <p>{coupon}</p>
-       <img src="/closeiconred.png" alt="not found" style={{
-        position:'absolute',
-        top:'0px',
-        right:'0',
-        margin:'auto 0px',
-        cursor:'pointer',
-        }} onClick={()=>{setCoupon(null); setId(null);}}/>
+       <CouponCross className="crossStyle"
+         onClick={()=>{setCoupon(null); setActiveIndex(null);}}/>
        </span>
      )}
        <span className="warningText">Cancel anytime,(Non-refundable)</span>
@@ -158,7 +151,7 @@ export const Template1 = () => {
     </div>
     <Modal show={show} setShow={setShow} data={data} cardId={cardid} />
   </div>
-    {isOpen && <Popup coupontext={coupon} setcoupon={setCoupon} modal={isOpen} setModal={setModal} setId={setId} activeIndex={activeIndex}/>}
+    {isOpen && <Popup coupontext={coupon} setcoupon={setCoupon} modal={isOpen} setModal={setModal} setId={setActiveIndex} activeIndex={activeIndex}/>}
   </>
   );
 }

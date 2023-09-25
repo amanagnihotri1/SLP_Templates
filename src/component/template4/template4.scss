@@ -47,6 +47,10 @@
     height: auto;
     box-shadow: none;
 }
+.whiteBorder
+{
+    border: 0.5px solid #E7E7E7;
+}
 .subscriptionStyle4
 {
  @include template4.textStyling(16px,600,0,0);
@@ -77,16 +81,16 @@
 }
 .slick-list {
     height: 555px;
-    padding: 120px 0px;
+    padding: 120px 0;
+    padding-left: 16px;
     margin: 0 -5px;}
 .slick-slide>div {padding: 0 5px;}
 }
 .cardsubContent
 {
-width: 94% !important;
-margin-left: 6%;
-margin-right: 3%;
-margin-top: 3%;
+width: 86% !important;
+margin:0 auto;
+margin-top: 32px;
 }
 .subsDescription
 {
@@ -95,6 +99,7 @@ font-weight:bold;
 font-size: 16px;
 font-family: 'Roboto';
 text-transform:uppercase;
+margin: 0px;
 }
 .priceTagStyle5
 {
@@ -123,11 +128,6 @@ p
     border-top-left-radius: 10px;
     flex-direction: column;
     position: relative;
-&:hover
-{
-    filter: drop-shadow(0px 0px 16px #0000004D);
-    box-shadow:  0px 0px 16px #0000004D;
-}
 }
 .cardStyleweb2
 {
@@ -139,7 +139,7 @@ p
 {
     display: flex;
     @include template4.textStyling(16px,400,0,0);
-    margin-top: -15px;
+    margin-top: -12px;
     height:38px;
 }
 .pricetagtext
@@ -180,6 +180,11 @@ img
     @extend %imageStyling;
 }    
 }
+.benefitcontent
+{
+    font-size:12px;
+    font-weight:500;
+}
 .combowrapper
 {
     width: 273.59px;
@@ -217,7 +222,9 @@ img
 }
 .cardmainWrapper:hover
 {
-    border: 2px solid black;
+    border: 0.5px solid black;
+    filter: drop-shadow(0px 0px 16px #0000004D);
+    box-shadow:  0px 0px 16px #0000004D;
 }
 .pricetagtext
 { 
@@ -227,7 +234,6 @@ img
 {  
     @include buttonStyling(270px,40px,5px,none);
     margin-top: 18px;
-    margin-left: 4px;
     font-weight: 600;
     font-size: 18px;
     padding: 10px 0px;
@@ -238,7 +244,7 @@ img
 .cardStyling5
 {
     @include cardProperties(315px,478px);
-    box-shadow: 0px 0px 15px #0000001C;
+    
     margin: 6% 3%;
     display: flex;
     flex-direction: column;
@@ -249,7 +255,6 @@ img
 {
     width: 273px;
     min-height: 118px;
-    margin-left: 20px;
 }
 .benefitlistwrapper
 {
@@ -277,26 +282,22 @@ img
    font-size: 14px;
    text-align: center;
    background-color: #22355B;
-   border-bottom-left-radius: 10px;
-   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 9px;
+   border-bottom-right-radius: 9px;
    color: #CED8DE;
    margin-top:0px;
    margin-bottom: 0px;
    cursor: pointer;
    padding:13px 0px;
 }
-.offerspace:hover>.cardmainWrapper
-{
-    border: 2px solid black;
-}
 .cardmainWrapper
 {
     width: 316px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 15px #0000001C;
-    border-radius: 12px;
-    box-shadow: 0.5px solid #E7E7E7;
+    border-radius: 10px;
+    border: 0.5px solid transparent;
+    border: 0.5px solid #E7E7E7;
 }
 .arrowwrapper4
 { 
@@ -338,12 +339,54 @@ svg
 {
     margin-left: 30px;
 }
-.appliedcouponstyling
+.appliedcouponstyling2
 {
-    font-size:14px;
-    margin:10px 0px 10px 0px;
-    padding:0;
-    font-weight:bold;
-    text-decoration:none;
-    cursor:pointer;
+  width: 270px;
+  background-color: #E6FFEC;
+  color: #30B73B;
+  border-radius:4px;
+  position:relative;
+  text-decoration: none;
+  align-items: center;
+  display:flex;
+  gap:5px;
+  width:100%;
+  z-index: 0;
+  margin: 12px 0px;  
+  padding: 2px 0px;    
+  p
+  {
+       margin:0;
+       color:#30B73B;
+       font-weight:bold; 
+       font-size: 13px;
+       text-decoration: none;
+  }
+  .crossStyle
+  {
+   width: 14px;
+   height: auto;
+   font-size: 240px;
+   position: absolute;
+   right: 4px; 
+ }
+ .checkIconStyle
+ {
+   width: 18px;
+   height: auto;
+   stroke-width: 2px;
+   margin-left: 4px;
+   font-size: 4px;
+ }
+      }
+.notappliedcoupon2
+{
+  font-size:14px;
+  margin:12px 0px 15px 0px;
+  padding:0;
+  font-weight:Regular;
+  text-decoration:underline;
+  cursor:pointer;
+  text-align: center;
+  z-index: 0;
 }

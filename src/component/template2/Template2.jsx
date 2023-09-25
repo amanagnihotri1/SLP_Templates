@@ -24,19 +24,20 @@ export const Template2 = () => {
   const slideRef=useRef();
   const settings = {
     dots: false,
-    infinite: true,
     className:"mainWrapper2",
-    speed: 500,
+    speed: 400,
     centerMode:true,
     arrows: false,
     easing:'linear',
+    swipe:false,
+    adaptiveWidth:true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay:false,
   };  
   const dropStyle=
   {
-    background:'#D8EBFF',
+    background:'#E6E6E6 0% 0% no-repeat padding-box',
     borderRadius:'5px',
     fontFamily:`Roboto,sans-serif`,
     width: '270px',
@@ -49,7 +50,7 @@ export const Template2 = () => {
     alignItems:'center',
     justifyContent:'space-between',
     marginBottom:'0px',
-    fontWeight:'bold',
+    fontWeight:'Regular',
   };
   const wrapperstyle=
   {
@@ -58,7 +59,7 @@ export const Template2 = () => {
   const optionstyle=
   {
     color:'#223F80',
-    backgroundColor:'#D8EBFF',
+    background:'#E6E6E6 0% 0% no-repeat padding-box',
   }  
   return (
     <>
@@ -75,7 +76,7 @@ export const Template2 = () => {
     <Slider {...settings} ref={slideRef}>
     {data2.map((item,index)=>(
      <>
-    <div className='card1' style={{backgroundColor:item.primaryColor,boxShadow:'5px 10px 30px #00000019;'}}>
+    <div className='card1 slide' style={{backgroundColor:item.primaryColor,boxShadow:'5px 10px 30px #00000019;'}}>
       <div className='mainContentWrapper2'> 
        <div className='titlewrapper1'>
        <img className='iconmain' src={`${item.iconUrl}`} alt='no'/>
@@ -108,15 +109,17 @@ export const Template2 = () => {
        <div className='cta-wrapper' style={{display:item.isRecommeded?'none':'flex'}}>
        {item?.isRecommended && 
        <button className='actionbutton2' 
-       style={{backgroundColor:item.buttonColor,color:item.primaryColor==='#0A083E'?'#F9E1F8':'#E73E88'}}>
+       style={{backgroundColor:item.buttonColor,color:item.buttonTextColor}}>
        Subscribe</button>
        }
        {activeIndex!==item.id?(
-        <div className='notappliedcoupon' style={{display:item.isRecommended?'flex':'none',color:'#E73E88'}}
-          onClick={()=>{setModal(true); setId(itemid);}}>Apply Coupon</div>):
+        <p className='notappliedcoupon1' style={{display:item.isRecommended?'flex':'none',color:'#E73E88'}}
+          onClick={()=>{setModal(true); 
+          setActiveIndex(itemid);}}>
+        Apply Coupon</p>):
        (<span 
-       className="appliedcouponstyling">
-        <Ticksvg stroke={`#30B73B`} width={14} height={14}  />
+       className="appliedcouponstyling1">
+        <Ticksvg stroke={`#30B73B`} className="checkIconStyle" width={14} height={14}  />
        <p>
         {coupon}
         </p>
@@ -153,7 +156,7 @@ export const Template2 = () => {
       {!item?.isRecommended && coupon===null?
         (<p 
             onClick={()=>{setActiveIndex(item.id); setModal(!isOpen);}}
-            className='notappliedcoupon' 
+            className='notappliedcoupon1' 
             style={{color:'#E73E88'}}
             >
             Apply Coupon

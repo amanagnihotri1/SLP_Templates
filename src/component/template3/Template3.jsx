@@ -22,8 +22,9 @@ const SlideToScroll=3;
     dots: false,
     infinite: true,
     className:'mainWrapper3',
-    speed: 500,
+    speed: 400,
     arrows: false,
+    swipe:false,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide:true,
@@ -95,7 +96,8 @@ const SlideToScroll=3;
            styleObj={{...dropStyle,
            backgroundColor:item.dropdownColor,
            color:item.textColor,
-           border:`0.5px solid ${item.textColor}`,
+           border:`0.5px solid ${item.isRecommended?'transparent':'#000'}`,
+           outline:'none',
            }} 
            optionStyle={{backgroundColor:item.primaryColor, color:item.textColor}} 
            cardId={cardId}
@@ -109,14 +111,14 @@ const SlideToScroll=3;
           {activeIndex!==item.id?
            (<p 
             onClick={()=>{setActiveIndex(item.id); setModal(!isOpen);}}
-            className='notappliedcoupon' 
+            className='notappliedcoupon2' 
             style={{color:item.textColor}}
             >
             Apply Coupon
            </p>):
            (coupon!=null &&<span 
-       className="appliedcouponstyling">
-        <Ticksvg stroke={`#30B73B`} width={14} height={14}  />
+       className="appliedcouponstyling2">
+        <Ticksvg stroke={`#30B73B`} className='checkIconStyle' />
        <p>
         {coupon}
         </p>
@@ -129,9 +131,9 @@ const SlideToScroll=3;
          <p className='benefit_heading3' style={{color:item.textColor}}>Benefits</p>
          { item.benefits.map((it)=>(
          <div className='benefititem3'>
-             <CheckIcon fill={item.benefitColor} />
+             <CheckIcon fill={item.textColor} />
             <div className='itemText'>
-            <span style={{color:item.benefitColor}}>
+            <span style={{color:item.textColor}}>
             {it}
             </span> 
             </div>   
@@ -157,7 +159,7 @@ const SlideToScroll=3;
          </div>    
       ))}
          </div>
-         {item?.offers &&<p className="revealarea" style={{color:item.isRecommended?"#FFF":"#000"}} onClick={()=>{setShow(!show); setCardId(item.id)}}>More</p>} 
+         {item?.offers &&<p className="revealarea" style={{color:item.textColor}} onClick={()=>{setShow(!show); setCardId(item.id)}}>More</p>} 
          </div>
         </div>
         </>

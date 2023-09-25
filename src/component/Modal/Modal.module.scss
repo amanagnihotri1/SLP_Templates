@@ -57,6 +57,7 @@
     }
     .benefit {
       overflow-y: scroll;
+      
     &::-webkit-scrollbar
     {
       display: none;
@@ -65,7 +66,6 @@
       .benefit-list {
         display: flex;
         flex-direction: column;
-        color: #fff;
         font-size: 10px;
         margin: 5px 0px;
         gap: 9px;
@@ -95,7 +95,7 @@
       }
       .offer-list {
         display: flex;
-        background-color: #EAEAEA;
+        background-color:#EAEAEA;
         border-radius: 5px;
         width: 270px;
         height: 46px;
@@ -104,16 +104,16 @@
         padding: 0px 8px;
         gap: 1.5vw;
         font-size: 10px;
-          
+
           .offer-img {
             height: 30px;
             width: 30px;
             border-radius: 5px;
           }
-          .offer-title {
-            color: #ffffff;
-          }
-        
+        .offer-title
+        {
+          color:black;
+        }
       }
     }
     .view-more {
@@ -121,8 +121,8 @@
       align-items: center;
       cursor: pointer;
       gap: 3px;
+      color: inherit;
       font-size: 10px;
-      color: #ffffff;
     }
     .hide_view_more
     {
@@ -131,7 +131,6 @@
       cursor: pointer;
       gap: 3px;
       font-size: 10px;
-      color: #ffffff;
     }
   }
 }

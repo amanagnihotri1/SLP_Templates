@@ -301,7 +301,7 @@ img
  .itemText
  {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: medium;
  }
  .tick3
  {
@@ -357,7 +357,7 @@ img
 .offertext
 {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   margin: 17px 0px;
 }
 .revealarea
@@ -404,58 +404,54 @@ svg
  height: 12px;
 }
 }
-.notappliedcoupon
+.appliedcouponstyling2
+{
+  width: 270px;
+  background-color: #E6FFEC;
+  color: #30B73B;
+  border-radius:4px;
+  position:relative;
+  text-decoration: none;
+  align-items: center;
+  display:flex;
+  gap:5px;
+  width:100%;
+  z-index: 0;
+  margin: 12px 0px;  
+  padding: 2px 0px;    
+  p
+  {
+       margin:0;
+       color:#30B73B;
+       font-weight:bold; 
+       font-size: 13px;
+       text-decoration: none;
+  }
+  .crossStyle
+  {
+   width: 14px;
+   height: auto;
+   font-size: 240px;
+   position: absolute;
+   right: 4px; 
+ }
+ .checkIconStyle
+ {
+   width: 18px;
+   height: auto;
+   stroke-width: 2px;
+   margin-left: 4px;
+   font-size: 4px;
+ }
+      }
+.notappliedcoupon2
 {
   font-size:14px;
-  margin:12px 0px 10px 0px;
+  margin:12px 0px 15px 0px;
   padding:0;
-  font-weight:bold;
+  font-weight:Regular;
   text-decoration:underline;
   cursor:pointer;
   text-align: center;
   z-index: 0;
 }
-.appliedcouponstyling
-{
-        width: 270px;
-        background-color: #E6FFEC;
-        color: #30B73B;
-        border-radius:4px;
-        position:relative;
-        text-decoration: none;
-        align-items: center;
-        display:flex;
-        gap:5px;
-        padding:0 0px;
-        width:100%;
-        z-index: 0;
-        margin-top: 12px;
-    svg
-    {
-      width: 14px;
-      height: 14px;
-      margin-left: 4px;
-    }    
-   p
-   {
-      margin:0;
-        padding:4px 0px;
-        color:#30B73B;
-        font-weight:bold; 
-        text-decoration: none;
-   }
-    img
-   {
-    width: 14px;
-    height: auto;
-    margin-right: 4px;
-   }
-   .crossStyle
-   {
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    right: 4px;
-    padding: 0px 2px; 
-  }
-      }

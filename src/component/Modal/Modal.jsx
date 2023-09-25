@@ -1,6 +1,7 @@
 import style from "../Modal/Modal.module.scss";
 import { useState } from "react";
 import {ReactComponent as ArrowIcon} from "../../assets/arrowIcon.svg";
+import {ReactComponent as CheckIcon} from "../../assets/checkiconformodal.svg"
 import reactIcon from "../../assets/crossIcon.png";
 const Modal = ({show,setShow,data,cardId,popupStyle}) => {
   console.log(data,cardId);
@@ -26,7 +27,7 @@ const Modal = ({show,setShow,data,cardId,popupStyle}) => {
                       ? style["header-Active"]
                       : style["header-Inactive"]
                   }
-                  style={{color:data[cardId]?.textColor}}
+                  style={{color:data[cardId]?.benefitColor}}
                   onClick={() =>{ setToggle("benefits"); setBorder(`2px solid ${data[cardId]?.benefitColor}`)}}
                 >
                   Benefits
@@ -42,12 +43,15 @@ const Modal = ({show,setShow,data,cardId,popupStyle}) => {
                   Offers
                 </div>
               </div>
-              <div className={style["benefit"]} style={{ height: stYle }}>
+              <div className={style["benefit"]} style={{ height: stYle,boxShadow:`inset 0px -11px 8px -10px ${data[cardId].primaryColor}`}}>
                     {toggle === "benefits" ? 
                     (<div className={style["benefit-list"]}>
                     {data[cardId]?.benefits?.map((ele)=>(
                       <div className={style["benefit-listwrapper"]}>
                        <div className={style["benefiticonwrapper"]}>
+                        <CheckIcon fill={data[cardId].benefitColor} width={12} height={12}
+          
+                        />
                         </div>
                         <div style={{ marginTop: "-2px" ,color:data[cardId].benefitColor}} >
                          {ele}
